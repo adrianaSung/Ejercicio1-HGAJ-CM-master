@@ -4,7 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import com.example.ejerciciohgaj.databinding.ActivityMainBinding
 import java.text.SimpleDateFormat
 import java.util.*
@@ -15,6 +17,13 @@ class MainActivity : AppCompatActivity() {
     var numerodecuenta: String= ""
     var correo: String=""
     var tuCumple: String= ""
+    var mes: Int= 0
+    var dia: Int= 0
+    var anio: Int= 0
+    lateinit var imagenS: ImageView
+
+
+
 
 
 
@@ -29,6 +38,7 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.tvTitulo.text ="Ingresa datos"
+
 
 
 
@@ -50,7 +60,11 @@ class MainActivity : AppCompatActivity() {
       /*  binding.tvFecha1.setText("$day/$month/$year")*/
         binding.tvFecha1.setText(getString(R.string.fecha_de_nacimiento, day, month, year))
 
+
         var tuCumple = "$day/$month/$year"
+        dia = day
+        mes = month
+        anio= year
         lateinit var cumple: Date
         try {
             cumple = SimpleDateFormat("dd/MM/yyyy").parse(tuCumple)
@@ -67,7 +81,9 @@ class MainActivity : AppCompatActivity() {
 
         edad =  (dias/365).toInt()
 
+
         println("Tu edad es $edad")
+
 
 
     }
@@ -106,10 +122,13 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this,MainActivity2::class.java)
         val parametros = Bundle()
 
+
+
         nombre = binding.tvNombre.text.toString()
         numerodecuenta = binding.tvNumeroDeC.text.toString()
         correo = binding.tvEmail.text.toString()
         tuCumple = binding.tvFecha1.text.toString()
+
 
 
 
@@ -118,6 +137,13 @@ class MainActivity : AppCompatActivity() {
         parametros.putString("numerodecuenta",numerodecuenta)
         parametros.putString("tuCumple",tuCumple)
         parametros.putString("correo",correo)
+        parametros.putInt("dia",dia)
+        parametros.putInt("dia",mes)
+        parametros.putInt("anio",anio)
+
+
+
+
 
 
 
@@ -131,6 +157,7 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
 
 
 }
