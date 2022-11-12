@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 
     }
     fun onDateSelected(day: Int, month:Int, year: Int){
-        binding.tvFecha1.setText("$day/$month/$year")
+      /*  binding.tvFecha1.setText("$day/$month/$year")*/
         binding.tvFecha1.setText(getString(R.string.fecha_de_nacimiento, day, month, year))
 
         var tuCumple = "$day/$month/$year"
@@ -109,7 +109,8 @@ class MainActivity : AppCompatActivity() {
         nombre = binding.tvNombre.text.toString()
         numerodecuenta = binding.tvNumeroDeC.text.toString()
         correo = binding.tvEmail.text.toString()
-        tuCumple = binding.tvNumeroDeC.text.toString()
+        tuCumple = binding.tvFecha1.text.toString()
+
 
 
         parametros.putString("nombre",nombre)

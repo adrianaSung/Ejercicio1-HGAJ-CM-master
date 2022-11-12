@@ -16,27 +16,31 @@ class MainActivity2 : AppCompatActivity() {
 
         setContentView(binding2.root)
 
-        var bundle = intent.extras
+        val bundle = intent.extras
 
         var nombre = bundle?.getString("nombre","")
         var tuCumple =bundle?.getString("tuCumple","")
-        var edad =bundle?.getInt("edad",0)
         var cuenta =bundle?.getString("numerodecuenta","")
         var correo = bundle?.getString("correo","")
+        var edad =bundle?.getInt("edad",0)
+
         edad.toString()
 
         print(tuCumple)
 
         binding2.tvNombre2.text = getString(R.string.tv_resultado_nombre, nombre)
-        binding2.tvCumpleanos.text= tuCumple.toString()
-        binding2.tvNumerodeCuenta.text= cuenta.toString()
-        binding2.tvCorreo2.text= correo.toString()
+        binding2.tvCumpleanos.text= ("Cumpleaños:"+tuCumple.toString())
+        binding2.tvNumerodeCuenta.text= ("Número de cuenta:"+cuenta.toString())
+        binding2.CorreitoTv.text= ("Correo:"+correo.toString())
+        binding2.tvEdad.text= ("Tu edad es: "+edad.toString())
+
+
 
 
     }
     fun click(view:View){
         val intent= Intent(this,MainActivity::class.java)
-        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+       // intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
         startActivity(intent)
 
     }

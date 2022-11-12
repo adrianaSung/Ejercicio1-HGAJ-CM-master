@@ -6,8 +6,10 @@
     <string name="hintCorreo">Email</string>
     <string name="buttComenzar">Start</string>
     <string name="hintNombre">Name</string>
-    <string name="idioma">es</string>
-    <string name="texto">Text</string>
+    <string name="idioma">Lenguage</string>
     <string name="Regresar">return</string>
     <string name="tv_resultado_nombre">Name %s</string>
+    <string name="tv_resultado_cuenta">Account Number</string>
+    <string name="correo2">Email</string>
+    <string name="edad">age</string>
 </resources>

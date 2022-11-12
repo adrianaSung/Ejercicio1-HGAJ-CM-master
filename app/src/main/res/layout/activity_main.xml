@@ -25,8 +25,8 @@
 
     <EditText
         android:id="@+id/tvFecha1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="380dp"
+        android:layout_height="58dp"
         android:clickable="true"
         android:ems="10"
         android:focusable="false"
@@ -49,8 +49,8 @@
 
     <EditText
         android:id="@+id/tvNumeroDeC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="380dp"
+        android:layout_height="58dp"
         android:ems="10"
         android:fontFamily="@font/annie_use_your_telescope"
         android:gravity="center_horizontal"
@@ -71,8 +71,8 @@
 
     <EditText
         android:id="@+id/tvEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="308dp"
+        android:layout_height="58dp"
         android:ems="10"
         android:fontFamily="@font/annie_use_your_telescope"
         android:gravity="center_horizontal"
@@ -107,8 +107,8 @@
 
     <EditText
         android:id="@+id/tvNombre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="380dp"
+        android:layout_height="58dp"
         android:ems="10"
         android:fontFamily="@font/annie_use_your_telescope"
         android:gravity="center_horizontal"
@@ -132,7 +132,7 @@
         android:backgroundTint="#2196F3"
         android:fontFamily="@font/aclonica"
         android:onClick="click_idioma"
-        android:text="@string/idioma"
+        android:text="@string/en"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -146,7 +146,8 @@
         android:layout_width="65dp"
         android:layout_height="48dp"
         android:backgroundTint="#2196F3"
-        android:text="@string/idioma"
+        android:onClick="click_idioma"
+        android:text="@string/esp"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
