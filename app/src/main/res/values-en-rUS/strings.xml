@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ingresa">Enter your data</string>
+    <string name="hintFecha">Date of birth</string>
+    <string name="hintCuenta">Account Number</string>
+    <string name="hintCorreo">Email</string>
+    <string name="buttComenzar">Start</string>
+    <string name="hintNombre">Name</string>
+    <string name="idioma">es</string>
+    <string name="texto">Text</string>
+    <string name="Regresar">return</string>
+    <string name="tv_resultado_nombre">Name %s</string>
+</resources>

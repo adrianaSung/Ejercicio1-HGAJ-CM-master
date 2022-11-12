@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name" translatable="false">EjercicioHGAJ</string>
+    <string name="ingresa">Ingresa datos</string>
+    <string name="hintFecha">Fecha de nacimiento</string>
+    <string name="hintCuenta">Número de cuenta</string>
+    <string name="hintCorreo">Correo</string>
+    <string name="buttComenzar">Comenzar</string>
+    <string name="hintNombre">Nombre</string>
+    <string name="idioma">en</string>
+    <string name="fecha_de_nacimiento" translatable="false">%1d / %2d /%3d </string>
+    <string name="texto">Texto</string>
+    <string name="Regresar">regresar</string>
+    <string name="tv_resultado_nombre">Nombre: %s</string>
+
+</resources>
