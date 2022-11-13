@@ -56,8 +56,8 @@
 
     <TextView
         android:id="@+id/tvNumerodeCuenta"
-        android:layout_width="343dp"
-        android:layout_height="39dp"
+        android:layout_width="296dp"
+        android:layout_height="32dp"
         android:fontFamily="@font/annie_use_your_telescope"
         android:text="@string/tv_resultado_cuenta"
         android:textColor="#F6F4F4"
@@ -103,7 +103,21 @@
         android:layout_height="132dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.527"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/imageChino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.781"
         tools:srcCompat="@tools:sample/avatars" />
 </androidx.constraintlayout.widget.ConstraintLayout>

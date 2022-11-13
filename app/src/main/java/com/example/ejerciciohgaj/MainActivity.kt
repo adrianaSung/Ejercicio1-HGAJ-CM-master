@@ -138,7 +138,7 @@ class MainActivity : AppCompatActivity() {
         parametros.putString("tuCumple",tuCumple)
         parametros.putString("correo",correo)
         parametros.putInt("dia",dia)
-        parametros.putInt("dia",mes)
+        parametros.putInt("mes",mes)
         parametros.putInt("anio",anio)
 
 
