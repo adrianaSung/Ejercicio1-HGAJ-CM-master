@@ -180,7 +180,7 @@ class MainActivity : AppCompatActivity() {
                                 binding.tvEmail.error = getString(R.string.correo_no_valido)
                             }
 
-                            if(binding.tvNumeroDeC.text.toString().length != 9) {
+                            if(binding.tvNumeroDeC.text.toString().length < 9) {
                                 Toast.makeText(this,"El numero de cuenta tiene que tener 9 digitos", Toast.LENGTH_LONG).show()
                                 binding.tvEmail.error = getString(R.string.Error_cuenta)
                             }
