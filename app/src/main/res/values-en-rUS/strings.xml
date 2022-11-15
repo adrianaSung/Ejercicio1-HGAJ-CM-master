@@ -12,4 +12,7 @@
     <string name="tv_resultado_cuenta">Account Number</string>
     <string name="correo2">Email</string>
     <string name="edad">age</string>
+    <string name="correo_no_valido">Not valid email</string>
+    <string name="nombre_vacio">Name field is required</string>
+    <string name="numerodecuenta_vacio">Account number field is required</string>
 </resources>

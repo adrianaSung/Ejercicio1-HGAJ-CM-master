@@ -123,19 +123,24 @@ class MainActivity : AppCompatActivity() {
 
         if(binding.tvNombre.text.toString().isEmpty()){
             Toast.makeText(this,"Coloca tu nombre", Toast.LENGTH_LONG).show()
+            binding.tvNombre.error = getString(R.string.nombre_vacio)
+
 
 
         }else{
             if(binding.tvFecha1.text.toString().isEmpty()){
                 Toast.makeText(this,"Coloca tu fecha de nacimiento", Toast.LENGTH_LONG).show()
 
+
             }else{
                 if(binding.tvNumeroDeC.text.toString().isEmpty()){
                     Toast.makeText(this,"Coloca tu numero de cuenta", Toast.LENGTH_LONG).show()
+                    binding.tvNombre.error = getString(R.string.numerodecuenta_vacio)
 
                 }else{
                     if(binding.tvEmail.text.toString().isEmpty()){
                         Toast.makeText(this,"Coloca tu email", Toast.LENGTH_LONG).show()
+
 
                     }else{
                         Toast.makeText(this,"Formulario completo :)", Toast.LENGTH_LONG).show()
@@ -144,36 +149,44 @@ class MainActivity : AppCompatActivity() {
 
 
 
-                        nombre = binding.tvNombre.text.toString()
-                        numerodecuenta = binding.tvNumeroDeC.text.toString()
-                        correo = binding.tvEmail.text.toString()
-                        tuCumple = binding.tvFecha1.text.toString()
+                        if(isValidString(binding.tvEmail.text.toString())) {
+                            nombre = binding.tvNombre.text.toString()
+                            numerodecuenta = binding.tvNumeroDeC.text.toString()
+                            correo = binding.tvEmail.text.toString()
+                            tuCumple = binding.tvFecha1.text.toString()
 
 
 
 
-                        parametros.putString("nombre",nombre)
-                        parametros.putInt("edad",edad)
-                        parametros.putString("numerodecuenta",numerodecuenta)
-                        parametros.putString("tuCumple",tuCumple)
-                        parametros.putString("correo",correo)
-                        parametros.putInt("dia",dia)
-                        parametros.putInt("mes",mes)
-                        parametros.putInt("anio",anio)
+                            parametros.putString("nombre",nombre)
+                            parametros.putInt("edad",edad)
+                            parametros.putString("numerodecuenta",numerodecuenta)
+                            parametros.putString("tuCumple",tuCumple)
+                            parametros.putString("correo",correo)
+                            parametros.putInt("dia",dia)
+                            parametros.putInt("mes",mes)
+                            parametros.putInt("anio",anio)
 
 
 
+                            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+                            intent.putExtras(parametros)
+                            startActivity(intent)
+                        } else {
+                            Toast.makeText(this,"Correo no válido", Toast.LENGTH_LONG).show()
+                            binding.tvEmail.error = getString(R.string.correo_no_valido)
+                        }
 
-
-                        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
-                        intent.putExtras(parametros)
-                        startActivity(intent)
                     }
                 }
             }
         }
 
 
+    }
+    /*VALIDANDO CORREOS*/
+    fun isValidString(str: String): Boolean{
+        return android.util.Patterns.EMAIL_ADDRESS.matcher(str).matches()
     }
 
     /*VALIDANDO DATOS*/

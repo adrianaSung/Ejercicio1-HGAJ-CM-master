@@ -15,6 +15,14 @@
     <string name="edad">Edad: %d</string>
     <string name="en" translatable="false">en</string>
     <string name="esp" translatable="false">esp</string>
+    <string name="correo_no_valido">Correo no valido </string>
+    <string name="nombre_vacio">Coloca tu nombre </string>
+    <string name="numerodecuenta_vacio">Coloca tu numero de cuenta </string>
+
+
+
+
+
 
 
 </resources>
