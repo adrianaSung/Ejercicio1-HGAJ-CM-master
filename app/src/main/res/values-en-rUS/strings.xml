@@ -15,4 +15,5 @@
     <string name="correo_no_valido">Not valid email</string>
     <string name="nombre_vacio">Name field is required</string>
     <string name="numerodecuenta_vacio">Account number field is required</string>
+    <string name="Error_cuenta">Account number should has 9 digits</string>
 </resources>

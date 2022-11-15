@@ -149,7 +149,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-                        if(isValidString(binding.tvEmail.text.toString())) {
+                        if(isValidString(binding.tvEmail.text.toString()) && binding.tvNumeroDeC.text.toString().length==9) {
                             nombre = binding.tvNombre.text.toString()
                             numerodecuenta = binding.tvNumeroDeC.text.toString()
                             correo = binding.tvEmail.text.toString()
@@ -173,8 +173,17 @@ class MainActivity : AppCompatActivity() {
                             intent.putExtras(parametros)
                             startActivity(intent)
                         } else {
-                            Toast.makeText(this,"Correo no válido", Toast.LENGTH_LONG).show()
-                            binding.tvEmail.error = getString(R.string.correo_no_valido)
+
+
+                            if(!isValidString(binding.tvEmail.text.toString())){
+                                Toast.makeText(this,"Correo no válido", Toast.LENGTH_LONG).show()
+                                binding.tvEmail.error = getString(R.string.correo_no_valido)
+                            }
+
+                            if(binding.tvNumeroDeC.text.toString().length != 9) {
+                                Toast.makeText(this,"El numero de cuenta tiene que tener 9 digitos", Toast.LENGTH_LONG).show()
+                                binding.tvEmail.error = getString(R.string.Error_cuenta)
+                            }
                         }
 
                     }
