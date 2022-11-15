@@ -119,44 +119,69 @@ class MainActivity : AppCompatActivity() {
 
     }
     fun click(view: View){
-        val intent = Intent(this,MainActivity2::class.java)
-        val parametros = Bundle()
+
+
+        if(binding.tvNombre.text.toString().isEmpty()){
+            Toast.makeText(this,"Coloca tu nombre", Toast.LENGTH_LONG).show()
+
+
+        }else{
+            if(binding.tvFecha1.text.toString().isEmpty()){
+                Toast.makeText(this,"Coloca tu fecha de nacimiento", Toast.LENGTH_LONG).show()
+
+            }else{
+                if(binding.tvNumeroDeC.text.toString().isEmpty()){
+                    Toast.makeText(this,"Coloca tu numero de cuenta", Toast.LENGTH_LONG).show()
+
+                }else{
+                    if(binding.tvEmail.text.toString().isEmpty()){
+                        Toast.makeText(this,"Coloca tu email", Toast.LENGTH_LONG).show()
+
+                    }else{
+                        Toast.makeText(this,"Formulario completo :)", Toast.LENGTH_LONG).show()
+                        val intent = Intent(this,MainActivity2::class.java)
+                        val parametros = Bundle()
 
 
 
-        nombre = binding.tvNombre.text.toString()
-        numerodecuenta = binding.tvNumeroDeC.text.toString()
-        correo = binding.tvEmail.text.toString()
-        tuCumple = binding.tvFecha1.text.toString()
+                        nombre = binding.tvNombre.text.toString()
+                        numerodecuenta = binding.tvNumeroDeC.text.toString()
+                        correo = binding.tvEmail.text.toString()
+                        tuCumple = binding.tvFecha1.text.toString()
 
 
 
 
-        parametros.putString("nombre",nombre)
-        parametros.putInt("edad",edad)
-        parametros.putString("numerodecuenta",numerodecuenta)
-        parametros.putString("tuCumple",tuCumple)
-        parametros.putString("correo",correo)
-        parametros.putInt("dia",dia)
-        parametros.putInt("mes",mes)
-        parametros.putInt("anio",anio)
-
-
-
-
-
+                        parametros.putString("nombre",nombre)
+                        parametros.putInt("edad",edad)
+                        parametros.putString("numerodecuenta",numerodecuenta)
+                        parametros.putString("tuCumple",tuCumple)
+                        parametros.putString("correo",correo)
+                        parametros.putInt("dia",dia)
+                        parametros.putInt("mes",mes)
+                        parametros.putInt("anio",anio)
 
 
 
 
 
-        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
-        intent.putExtras(parametros)
-        startActivity(intent)
-
+                        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+                        intent.putExtras(parametros)
+                        startActivity(intent)
+                    }
+                }
+            }
+        }
 
 
     }
+
+    /*VALIDANDO DATOS*/
+
+    //fun validar(view: View){
+
+
+    //}
 
 
 
