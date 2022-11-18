@@ -19,6 +19,8 @@
     <string name="nombre_vacio">Coloca tu nombre </string>
     <string name="numerodecuenta_vacio">Coloca tu numero de cuenta </string>
     <string name="Error_cuenta">El número de cuenta debe ser de 9 dígitos</string>
+    <string name="SignoZ">Signo Zodiacal </string>
+    <string name="HoroscopoC">Horoscopo Chino </string>
 
 
 

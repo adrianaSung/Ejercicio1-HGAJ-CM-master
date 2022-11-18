@@ -1,6 +1,7 @@
 package com.example.ejerciciohgaj
 
 import android.content.Intent
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -10,12 +11,16 @@ import com.example.ejerciciohgaj.databinding.ActivityMain2Binding
 class MainActivity2 : AppCompatActivity() {
   //  var imSigno : String = ""
     private lateinit var binding2: ActivityMain2Binding
+    private lateinit var mp: MediaPlayer
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
+        overridePendingTransition(R.anim.animacion1,R.anim.animacion2)
         binding2 = ActivityMain2Binding.inflate(layoutInflater)
 
         //binding2.ImagenSigno.
+        mp = MediaPlayer.create(this,R.raw.cancion2)
+        mp.start()
 
 
         setContentView(binding2.root)
@@ -216,6 +221,16 @@ class MainActivity2 : AppCompatActivity() {
 
 
         }*/
+
+    }
+    override fun onPause(){
+        super.onPause()
+        mp.pause()
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        mp.start()
     }
 
 
@@ -224,5 +239,9 @@ class MainActivity2 : AppCompatActivity() {
        // intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
         startActivity(intent)
 
+    }
+    override fun onBackPressed(){
+        super.onBackPressed()
+        overridePendingTransition(R.anim.animacion2,R.anim.animacion1)
     }
 }

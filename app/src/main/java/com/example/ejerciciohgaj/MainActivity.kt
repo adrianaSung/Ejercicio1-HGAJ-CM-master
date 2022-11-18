@@ -1,6 +1,7 @@
 package com.example.ejerciciohgaj
 
 import android.content.Intent
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity() {
     var anio: Int= 0
     lateinit var imagenS: ImageView
 
-
+    private lateinit var mp: MediaPlayer
 
 
 
@@ -36,6 +37,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        mp = MediaPlayer.create(this,R.raw.cancion1)
+        mp.start()
+
 
         binding.tvTitulo.text ="Ingresa datos"
 
@@ -47,6 +51,15 @@ class MainActivity : AppCompatActivity() {
         binding.tvFecha1.setOnClickListener { showDatePickerDialog() }
 
 
+    }
+    override fun onPause(){
+        super.onPause()
+        mp.pause()
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        mp.start()
     }
 
 
