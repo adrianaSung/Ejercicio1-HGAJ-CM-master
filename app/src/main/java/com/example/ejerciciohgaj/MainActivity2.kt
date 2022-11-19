@@ -185,6 +185,13 @@ class MainActivity2 : AppCompatActivity() {
             if(anio == 1947 || anio== 1959 || anio== 1982 || anio == 1995 || anio == 2007 || anio ==2019 ){
                 binding2.imageChino.setImageResource(R.drawable.bufalo)
             }
+            if(anio== 2020|| anio== 2021){
+                binding2.imageChino.setImageResource(R.drawable.bufalo)
+            }
+            if(anio== 2022){
+                binding2.imageChino.setImageResource(R.drawable.tigre)
+            }
+
 
 
         }
